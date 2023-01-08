@@ -1,0 +1,82 @@
+﻿@{
+    Layout = null;///
+}
+<link href="~/Content/chosen.min.css" rel="stylesheet" />
+<link href="~/Content/chosen.css" rel="stylesheet" />
+
+
+<link href="~/Content/css/sb-admin.min.css" rel="stylesheet" />
+<link href="~/Content/css/tabcontrol.css" rel="stylesheet" />
+<link href="~/Content/css/sb-admin1.css" rel="stylesheet" />
+
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+<link href="~/assets/client/css/bootstrap.min.css" rel="stylesheet" />
+
+<script src="~/assets/client/js/jquery-1.11.3.min.js"></script>
+<script src="~/assets/client/js/jquery-ui.js"></script>
+<script src="~/assets/client/js/bootstrap.min.js"></script>
+<script src="~/Scripts/js/tabcontrol.js"></script>
+
+<link href="~/assets/client/css/bootstrap.min.css" rel="stylesheet" />
+<script src="~/assets/client/js/jquery-1.11.3.min.js"></script>
+<script src="~/assets/client/js/bootstrap.min.js"></script>
+<div class="modal fade" id="view-more-pcr-planview-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Add Platform To MIR</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-12 content-box">
+                    <div class="row content-detail">
+                        <div class="col-12 p-0">
+                            <div class="row row-action">
+                                <div class=" col-6 p-0">
+                                    <div class="col-12 search-info">
+                                        <label>Total: <b><span id="view-more-pcr-planview-grid-total-record">0</span> Record(s)</b></label>
+                                    </div>
+                                    <div class="col-12 search-info">
+                                        <label id="view-more-pcr-planview-grid-page-info">Filter Applied: 0 of 0 items</label>
+                                    </div>
+                                </div>
+                                <div class="col-6 actions">
+                                    <div class="btn-group dropdown float-right">
+                                        <button type="button" class="btn btn-default" id="view-more-pcr-planview-grid-clear-filter-grid" onclick='ClearFilterGrid("view-more-pcr-planview-grid")' disabled>
+                                            <i class="fa fa-eraser"></i>
+                                            Clear Filters
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="view-more-pcr-planview-grid"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default margin-left-5" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close" aria-hidden="true"></i>&nbsp;&nbsp;Close</button>
+                <button type="button" class="btn btn-primary margin-left-5" id="add-platform-to-mir-pcr" aria-hidden="true"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add to MIR</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom scripts for all pages-->
+<script src="~/js/sb-admin-2.min.js"></script>
+
+<button data-idTp="123" class="btn btn-primary btnShowDeletePending" type="button"><i class="fa fa-trash"></i>Xóa</button>
+<script>
+    $('#view-more-pcr-planview-modal').modal('show');
+
+    $('.btnShowDeletePending').on('click', function () {
+        var IdTp = $(this).attr('data-idTp');
+        $('#view-more-pcr-planview-modal').modal('show');
+        //$('#btnDelete' + IdTp).modal('show');
+    })
+    //$('#view-more-pcr-planview-modal').modal('show');
+</script>
